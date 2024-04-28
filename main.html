@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="game-container">
+        <header id="floor-header">Floor Header "Floor #num"</header>
+
+        <div class="content-row">
+            <div class="content-column" id="hint-text-column">
+                <p id="hint-text">Hint Text</p>
+            </div>
+            <div class="content-column" id="riddle-text-column">
+                <p id="riddle-text">Riddle Text</p>
+            </div>
+        </div>
+
+        <div class="content-row">
+            <div class="content-column" id="hint-image-column">
+                <img id="hint-image" alt="Hint Image" src="#">
+            </div>
+            <div class="content-column" id="riddle-image-column">
+                <img id="riddle-image" alt="Riddle Image" src="#">
+            </div>
+        </div>
+
+        <div class="content-row">
+            <div class="content-column">
+                <div class="buttons-column">
+                    <button id="show-hint">Hint</button>
+                    <button id="back-floor">Back</button>
+                    <button id="next-floor">Next</button>
+                    <button id="end-game">End</button>
+                </div>
+            </div>
+            <div class="content-column">
+                <div class="user-input-column">
+                    <input type="text" id="answer-input" placeholder="Enter answer here">
+                    <button id="submit-answer">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p id="game-messages">System Messages</p>
+        </div>
+    </div>
+
+    <script src="gameData.js"></script>
+    <script src="gameLogic.js"></script>
+</body>
+</html>

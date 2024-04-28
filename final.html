@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="he" >
+<head>
+    <meta charset="UTF-8" dir="rtl">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Index-Final.css">
+</head>
+<body class="final-page">
+    <div class="container">
+        <h1>!איזה כיף שהשתתפתם במשחק</h1>
+        <p>.אני מקווה שנהנתם והשכלתם</p>
+        <div class="score-display">
+            <p>תוצאתך הסופית: <span id="final-score">Loading...</span></p>
+        </div>
+        <button onclick="window.location='index.html';">Play Again</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const finalScore = localStorage.getItem('finalScore');
+            document.getElementById('final-score').textContent = finalScore || 'Not available';
+        });
+    </script>
+</body>
+</html>

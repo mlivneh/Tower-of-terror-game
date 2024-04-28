@@ -1,0 +1,145 @@
+﻿/* Base styles for all pages */
+html, body {
+    height: 100%; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrolling */
+    text-align: center; /* Center text alignment for all text */
+    background: #f4f4f4; /* Light grey background for better contrast */
+    color: #333; /* Dark grey text for better readability */
+    font-family: 'Arial', sans-serif; /* Default font for all text */
+}
+
+/* Shared container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers content */
+    align-items: center; /* Horizontally centers content */
+    min-height: 100vh; /* Minimum height of 100% of the viewport height */
+    padding: 20px;
+}
+
+/* Background image settings for index and final pages */
+.index-page .container, .final-page .container {
+    background-size: cover; /* Covers the entire container */
+    background-repeat: no-repeat; /* No repetition of the background */
+    background-position: center; /* Centers the background image */
+}
+
+/* Specific background images for each page */
+.index-page .container {
+    background-image: url('images/TowerOfTerror.gif');
+}
+
+.final-page .container {
+    background-image: url('images/gameOver.gif');
+}
+
+/* Font-face for custom 'Dam' font */
+@font-face {
+    font-family: 'Dam';
+    src: url('fonts/DamRegular-Regular.woff2') format('woff2'),
+         url('fonts/DamRegular-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Additional element styling */
+h1, h2, h3, h4, p, .score-display {
+    margin: 10px 0; /* Margin around headers, paragraphs, and score displays */
+}
+
+/* Specific font sizes for headers */
+h1 {
+    font-size: 28px; /* Larger font size for h1 on desktop */
+    color: red; /* Red text for emphasis */
+    font-family: 'Dam', Arial, sans-serif;
+}
+
+h2 {
+    font-size: 24px; /* Smaller than h1 on desktop */
+    color: red; 
+    font-family: 'Dam', Arial, sans-serif;
+}
+
+h3 {
+    font-size: 20px; 
+    color: red; 
+    font-family: 'Dam', Arial, sans-serif;
+}
+
+h4 {
+    font-size: 18px; 
+    color: red; 
+    font-family: 'Dam', Arial, sans-serif;
+}
+
+.score-display {
+    font-size: 24px; /* Specific font size for score displays */
+    font-weight: bold; /* Bold font weight for better visibility */
+}
+
+/* Input, button styling shared across pages */
+input, button {
+    padding: 10px 20px;
+    font-size: 18px; /* Consistent font size for better readability */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Cursor changes to pointer to indicate clickable */
+    transition: background-color 0.3s; /* Smooth color transition on hover */
+}
+
+input[type="text"] {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    color: #333; /* Text color to contrast with potential backgrounds */
+}
+
+input[type="text"]:focus {
+    background-color: rgba(255, 255, 255, 0.9); /* More opaque when focused */
+    outline: none; /* Removes the default focus outline */
+    border: 2px solid #0056b3; /* Adds a blue border on focus for better visibility */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+.index-page button, .final-page button {
+    background-color: #007BFF; /* Blue for buttons */
+}
+
+.index-page button:hover, .final-page button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.final-page, .final-page h1, .final-page h3, .final-page p, .final-page .score-display, .final-page button {
+    color: white; /* White text for all content on the final page */
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px; 
+    }
+
+    h3 {
+        font-size: 24px; 
+    }
+    h3 {
+        font-size: 20px; 
+    }
+    h3 {
+        font-size: 18px; 
+    }
+
+    .container {
+        padding: 10px; /* Adjust padding for smaller screens */
+        align-items: center; /* Keep items centered */
+    }
+
+    input, button {
+        padding: 8px 16px; /* Adjusts padding for smaller inputs and buttons */
+        font-size: 16px; /* Adjusts font size for readability on small devices */
+    }
+}
